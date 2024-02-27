@@ -44,7 +44,7 @@ mod ido_join_claim {
 pub struct CreateAta<'info> {
     #[account(mut)]
     pub payer: AccountInfo<'info>,
-    #[account(init, payer = payer, associated_token: mint)]
+    #[account(init, payer = payer, associated_token = mint)]
     pub associated_token_account: AccountInfo<'info>,
     #[account(address = spl_token::ID)]
     pub token_program: Program<'info, Token>,
